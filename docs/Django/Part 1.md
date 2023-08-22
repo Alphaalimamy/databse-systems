@@ -165,6 +165,3 @@ Arbitrary keyword arguments can be passed in a dictionary to the target view. We
 Naming your URL lets you refer to it unambiguously from elsewhere in Django, especially from within templates. This powerful feature allows you to make global changes to the URL patterns of your project while only touching a single file.
 
 When you’re comfortable with the basic request and response flow, read part 2 of this tutorial to start working with the database.
-
-
-

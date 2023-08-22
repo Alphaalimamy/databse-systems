@@ -50,9 +50,3 @@ urlpatterns = [
     path("/details/<str:pk>", views.event_details, name="event__details"),
 ]
 ```
-
-
-
-```python
-
-```
