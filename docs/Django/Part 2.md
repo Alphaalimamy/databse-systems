@@ -61,14 +61,20 @@ These concepts are represented by Python classes as shown below:
 
 
 
+```
 ```python
 from email.policy import default
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django_resized import ResizedImageField
 
+
 ### `User Model`
-# Create your models here.
+ **Create your models here.**'
+ 
+```
+### `Event Model`
+```python
 class User(AbstractUser):
     name = models.CharField(max_length=100, null=True)
     email = models.EmailField(unique=True, null=True)
@@ -90,8 +96,28 @@ class User(AbstractUser):
         ordering = ['avatar']
 ```
 
+```
 ### `Event Model`
 ```python
+class User(AbstractUser):
+    name = models.CharField(max_length=100, null=True)
+    email = models.EmailField(unique=True, null=True)
+    bio = models.TextField(null=True, blank=True)
+    hackathon_participant = models.BooleanField(default=True, null=True)
+
+    avatar = ResizedImageField(size=[300,300], default='avatar.png')
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
+
+    twitter = models.URLField(max_length=500, null=True, blank=True)
+    linkedin = models.URLField(max_length=500, null=True, blank=True)
+    website = models.URLField(max_length=500, null=True, blank=True)
+    facebook = models.URLField(max_length=500, null=True, blank=True)
+    github = models.URLField(max_length=500, null=True, blank=True)
+
+    class Meta:
+        ordering = ['avatar']
 class Event(models.Model):
     name = models.CharField(max_length=200)
     preview = models.TextField(null=True, blank=True)
