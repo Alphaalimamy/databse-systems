@@ -63,16 +63,15 @@ These concepts are represented by Python classes as shown below:
 
 ```
 ```python
-from email.policy import default
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django_resized import ResizedImageField
-
+```
 
 ### `User Model`
  **Create your models here.**'
  
-```
+
 ### `Event Model`
 ```python
 class User(AbstractUser):
@@ -98,7 +97,6 @@ class User(AbstractUser):
 
 ### `Event Model`
 ```python
-
 class Event(models.Model):
     name = models.CharField(max_length=200)
     preview = models.TextField(null=True, blank=True)
