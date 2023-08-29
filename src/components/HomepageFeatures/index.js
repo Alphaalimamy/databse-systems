@@ -8,7 +8,12 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
+<<<<<<< HEAD
         This tutorial is  designed for Database Systems students to be a teach your tutorial
+=======
+        This tutorial is  designed from the ground up to be easily installed and
+        used to get your website up and running quickly.
+>>>>>>> 6b1ccb7 (Initial commit)
       </>
     ),
   },
@@ -17,16 +22,30 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
+<<<<<<< HEAD
         The tutorial concentrates more on practical
+=======
+        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+        ahead and move your docs into the <code>docs</code> directory.
+>>>>>>> 6b1ccb7 (Initial commit)
       </>
     ),
   },
   {
+<<<<<<< HEAD
     title: 'Powered by Practical',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
        The tutorial is made to be more practical. less theory
+=======
+    title: 'Powered by React',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
+>>>>>>> 6b1ccb7 (Initial commit)
       </>
     ),
   },

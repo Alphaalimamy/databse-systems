@@ -7,11 +7,19 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'LIMKOKWING UNIVERSITY OF CREATIVE TECHNOLOGY',
+<<<<<<< HEAD
   tagline: 'TECH CONNECT',
   // favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://database-system.netlify.app/',
+=======
+  tagline: 'Database Systems: The Most Practical Course',
+  // favicon: 'img/favicon.ico',
+
+  // Set the production url of your site here
+  url: 'https://your-docusaurus-test-site.com',
+>>>>>>> 6b1ccb7 (Initial commit)
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -19,7 +27,11 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'facebook', // Usually your GitHub org/user name.
+<<<<<<< HEAD
   projectName: 'techConnect', // Usually your repo name.
+=======
+  projectName: 'docusaurus', // Usually your repo name.
+>>>>>>> 6b1ccb7 (Initial commit)
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -42,14 +54,22 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
+<<<<<<< HEAD
             'https://database-system.netlify.app/',
+=======
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+>>>>>>> 6b1ccb7 (Initial commit)
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
+<<<<<<< HEAD
             'https://database-system.netlify.app/',
+=======
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+>>>>>>> 6b1ccb7 (Initial commit)
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -74,7 +94,11 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
+<<<<<<< HEAD
             label: 'Tutorials',
+=======
+            label: 'Tutorial',
+>>>>>>> 6b1ccb7 (Initial commit)
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {
@@ -136,11 +160,14 @@ const config = {
               // },
             ],
           },
+<<<<<<< HEAD
 
           
           {
             title: 'Django'
           },
+=======
+>>>>>>> 6b1ccb7 (Initial commit)
         ],
 
         copyright: `Copyright © ${new Date().getFullYear()} Database Systems`,
@@ -152,6 +179,7 @@ const config = {
     }),
 };
 
+<<<<<<< HEAD
 // module.exports = {
 //   url: 'https://endiliey.github.io', // Your website URL
 //   baseUrl: '/',
@@ -166,10 +194,18 @@ module.exports = {
   baseUrl: '/',
   projectName: 'alphaalimamy.github.io',
   organizationName: 'alphaalimamy',
+=======
+module.exports = {
+  url: 'https://endiliey.github.io', // Your website URL
+  baseUrl: '/',
+  projectName: 'endiliey.github.io',
+  organizationName: 'endiliey',
+>>>>>>> 6b1ccb7 (Initial commit)
   trailingSlash: false,
 
 };
 
+<<<<<<< HEAD
 // alphaalimamy.github.io
 // https://github.com/Alphaalimamy/databse-systems/settings/pages
 module.exports = {
@@ -178,4 +214,6 @@ module.exports = {
 
 };
 
+=======
+>>>>>>> 6b1ccb7 (Initial commit)
 module.exports = config;
