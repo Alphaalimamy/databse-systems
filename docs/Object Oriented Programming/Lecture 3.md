@@ -1,0 +1,267 @@
+**Encapsulation and Decorators in Python : By Alpha Omar   	Leigh**
+## What is Encapsulation in Python?
+Encapsulation in Python describes the concept of bundling data and methods within a single unit. So, for example, when you create a class, it means you are implementing encapsulation. A class is an example of encapsulation as it binds all the data members (instance variables) and methods into a single unit.
+
+![Encapsulation](encapsulation_python_class.jpg)
+
+Example:
+
+In this example, we create an Employee class by defining employee attributes such as name and salary as an instance variable and implementing behavior using work() and show() instance methods.
+
+```python
+class Employee:
+    # constructor
+    def __init__(self, name, salary, project):
+        self.name = name
+        self.salary = salary
+        self.project = project
+    # Method
+    # to display employee details
+    def show(self):
+        # accessing public data members
+        print(f"Name: {self.name} Salary: {self.salary}")
+    # method
+    def work(self):
+        print(f"{self.name} is working on {self.project}")
+# creating object of a class
+emp = Employee('Jessa', 800.50, 'NLP')
+# Calling public method of the class
+emp.show()
+emp.work()
+```
+Using encapsulation, we can hide an object’s internal representation from the outside. This is called information hiding.
+Also, encapsulation allows us to restrict accessing variables and methods directly and prevent accidental data modification by creating private data members and methods within a class.
+Encapsulation is a way to can restrict access to methods and variables from outside of class. Whenever we are working with the class and dealing with sensitive data, providing access to all variables used within the class is not a good choice.
+For example, Suppose you have an attribute that is not visible from the outside of an object and bundle it with methods that provide read or write access. In that case, you can hide specific information and control access to the object’s internal state. Encapsulation offers a way for us to access the required variable without providing the program full-fledged access to all variables of a class. This mechanism is used to protect the data of an object from other objects.
+
+
+## Access Modifiers in Python
+
+Encapsulation can be achieved by declaring the data members and methods of a class either as private or protected. But In Python, we don’t have direct access modifiers like public, private, and protected. We can achieve this by using single underscore and double underscores.
+
+Access modifiers limit access to the variables and methods of a class. Python provides three types of access modifiers private, public, and protected.
+
+- Public Member: Accessible anywhere from outside the class.
+- Private Member: Accessible within the class
+- Protected Member: Accessible within the class and its sub-classes
+
+![](data1.PNG)
+
+
+## Private Member
+We can protect variables in the class by marking them private. To define a private variable add two underscores as a prefix at the start of a variable name.
+
+Private members are accessible only within the class, and we can’t access them directly from the class objects.
+
+Example:
+
+```python 
+class Employee:
+    # constructor
+    def __init__(self, name, salary):
+        # public data members
+        self.name = name
+        # private data members
+        self.__salary = salary
+# creating object of a class
+emp = Employee("Jessa", 10000)
+# Accessing private data members
+print(f"Salary: {emp.salary}")
+```
+## Protected Member
+Protected members are accessible within the class and also available to its sub-classes. To define a protected member, prefix the member name with a single underscore _.
+
+Protected data members are used when you implement inheritance and want to allow data members access to only child classes.
+
+Example: Proctecd member in inheritance.
+
+```python
+# Base Class
+class Company:
+    def __init__(self):
+        # protected data member
+        self._project = "NLP"
+# Child Class
+class Employee(Company):
+    def __init__(self, name):
+        self.name = name
+        Company.__init__(self)
+    def show(self):
+        print(f"Employee Name: {self.name}")
+    # Accessing protected data member in child class
+        print(f"Working on project: {self._project}")
+c = Employee("Jessa")
+c.show()
+# Direct access protected data member
+print("Project: ", c._project)
+
+```
+## Getters and Setters in Python
+To implement proper encapsulation in Python, we need to use setters and getters. The primary purpose of using getters and setters in object-oriented programs is to ensure data encapsulation. Use the getter method to access data members and the setter methods to modify the data members.
+
+In Python, private variables are not hidden fields like in other programming languages. The getters and setters methods are often used when:
+
+
+- When we want to avoid direct access to private variables
+- To add validation logic for setting a value
+Example
+
+```python
+class Student:
+    def __init__(self, name, age):
+        # private members
+        self.name = name
+        self._age = age
+    # getter method
+    def get_age(self):
+        return self._age
+    # setter method
+    def set_age(self, age):
+        self._age = age
+stud = Student("Jessa", 14)
+# Retrieving age using getter method
+print(f"Name: {stud.name} Age: {stud.get_age()}")
+# changing age using setter method
+stud.set_age(21)
+# Retrieving age using the getter method
+print(f"Name: {stud.name} Age: {stud.get_age()}")
+
+
+```
+Let’s take another example that shows how to use encapsulation to implement information hiding and apply additional validation before changing the values of your object attributes (data member).
+
+Example: Information Hiding and conditional logic for setting an object attributes
+```python
+class Student:
+    def __init__(self, name, roll_no, age):
+        #Private members
+        self.name = name
+        self.__roll_on = roll_no
+        self.__age = age
+    def show(self):
+        print(f"Student Details: {self.name} {self.__roll_on}")
+    # getter methods
+    def get_roll_no(self):
+        return self.__roll_on
+    # setter method to modify data members
+    #condition to allow data modification with rules
+    def set_roll_on(self, number):
+        if number > 50:
+            print('Invalid roll no. Please set correct roll number')
+        else:
+            self.__roll_on = number
+jessa = Student('Jessa', 10, 15)
+# before modify
+jessa.show()
+# changing roll number using setter
+jessa.set_roll_on(120)
+jessa.set_roll_on(25)
+jessa.show()
+```
+
+## Advantages of Encapsulation
+- Security: The main advantage of using encapsulation is the security of the data. Encapsulation protects an object from unauthorized access. It allows private and protected access levels to prevent accidental data modification.
+
+- Data Hiding: The user would not be knowing what is going on behind the scene. They would only be knowing that to modify a data member, call the setter method. To read a data member, call the getter method. What these setter and getter methods are doing is hidden from them.
+
+- Simplicity: It simplifies the maintenance of the application by keeping classes separated and preventing them from tightly coupling with each other.
+
+- Aesthetics: Bundling data and methods within a class makes code more readable and maintainable
+
+## Exercise
+Creating the CellPhone Class Wireless Solutions, Inc. is a business that sells cell phones and wireless service. You are a programmer in the company’s IT department, and your team is designing a program to manage all of the cell phones that are in inventory. You have been asked to design a class that represents a cell phone. 
+
+The data that should be kept as attributes in the class are as follows:
+
+• The name of the phone’s manufacturer will be assigned to the _ _manufact attribute.
+
+• The phone’s model number will be assigned to the _ _model attribute.
+
+• The phone’s retail price will be assigned to the _ _retail_price attribute.
+
+The class will also have the following methods:
+
+• An _ _init_ _ method that accepts arguments for the manufacturer, model number,
+and retail price.
+
+• A set_manufact method that accepts an argument for the manufacturer. 
+
+This method will allow us to change the value of the _ _manufact attribute after the object has been created, if necessary.
+
+• A set_model method that accepts an argument for the model. This method will allow
+us to change the value of the _ _model attribute after the object has been created, if necessary.
+
+• A set_retail_price method that accepts an argument for the retail price. 
+This
+method will allow us to change the value of the _ _retail_price attribute after the
+object has been created, if necessary.
+
+• A get_manufact method that returns the phone’s manufacturer.
+
+• A get_model method that returns the phone’s model number.
+
+• A get_retail_price method that returns the phone’s retail price.
+
+![](data2.PNG)
+![](data3.PNG)
+![](data4.PNG)
+![](data5.PNG)
+
+
+## Introduction to Decorators
+A decorator is a function that takes another function as an argument and returns a new function, usually extending or modifying the behavior of the input function.
+
+```python
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+```
+## Applying a Decorator
+To apply a decorator to a function, you use the "@" symbol followed by the decorator's name above the function definition:
+```python
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+```
+When you call say_hello(), it will execute the wrapper function defined inside my_decorator, which adds behavior before and after the say_hello function call.
+
+## Getter and Setter Methods vs Properties
+Programming languages like Java and C++ don’t expose attributes as part of their classes’ public APIs. Instead, these programming languages make extensive use of getter and setter methods to give you access to attributes.
+
+Using methods to access and update attributes promotes encapsulation. Encapsulation is a fundamental OOP principle that recommends protecting an object’s state or data from the outside world, preventing direct access. The object’s state should only be accessible through a public interface consisting of getter and setter methods.
+
+For example, say that you have a Person class with a .name instance attribute. You can make .name a non-public attribute and provide getter and setter methods to access and change that attribute:
+```python
+
+class Person:
+    def __init__(self, name):
+        self.set_name(name)
+
+    def get_name(self):
+        return self._name
+
+    def set_name(self, value):
+        self._name = value
+```
+
+```python
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        self._name = value.upper()
+  ```
+ This class defines .name as a property with appropriate getter and setter methods. Python will automatically call these methods, respectively, when you access or update the attribute’s value. The setter method takes care of uppercasing the input value before assigning it back to ._name:
