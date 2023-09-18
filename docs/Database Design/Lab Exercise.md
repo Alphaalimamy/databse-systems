@@ -17,33 +17,34 @@ Imagine a small online bookstore called "BookWorld." BookWorld wants to create a
 - For each entity, list the attributes associated with it.
 
 **Key Identification**
+- Determine the primary keys for each entity.
 
-Determine the primary keys for each entity.
-Relationship Identification:
+**Relationship Identification**
 
-Identify and describe the relationships between the entities (one-to-one, one-to-many, or many-to-many).
-Database Schema Design:
+- Identify and describe the relationships between the entities (one-to-one, one-to-many, or many-to-many).
+
+- **Database Schema Design**
 
 Based on your analysis, design a relational database schema using appropriate tables for each entity. Ensure that primary and foreign keys are defined correctly to maintain referential integrity.
-MySQL Implementation:
+
+**MySQL Implementation**
 
 Implement the database schema in MySQL. Write SQL commands to create the necessary tables, define primary and foreign keys, and set any other constraints.
-Data Population:
 
-Insert sample data into the tables to simulate a small inventory and customer database.
-Query Implementation:
+**Data Population**
 
-Write SQL queries to perform the following operations:
-Retrieve a list of all books by a specific author.
-Retrieve the details of a book with a given ISBN.
-Retrieve the customer information who placed an order.
-Calculate the total sales revenue for a given month.
-List the books with the highest average customer ratings.
-Presentation:
+- Insert 20 sample data into the tables to simulate a small inventory and customer database.
 
-Prepare a brief presentation summarizing your database design, key attributes, relationships, and the SQL queries you wrote.
-Deliverables:
+**Query Implementation**
+- Write SQL queries to perform the following operations:
+- Retrieve a list of all books by a specific author.
+- Retrieve the details of a book with a given ISBN.
+- Retrieve the customer information who placed an order. 
+- List the books with the highest average customer ratings.
 
-Entity, attribute, key, and relationship analysis document.
-SQL script file with database schema creation, data population, and query implementations.
-Presentation slides.
+**Presentation**
+- Prepare a brief presentation summarizing your database design, key attributes, relationships, and the SQL queries you wrote.
+
+**Deliverables**
+- Entity, attribute, key, and relationship analysis document.
+- SQL script file with database schema creation, data population, and query implementations.
