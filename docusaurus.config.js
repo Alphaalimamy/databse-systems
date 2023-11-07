@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'LIMKOKWING UNIVERSITY OF CREATIVE TECHNOLOGY',
-  tagline: 'TECH CONNECT',
+  tagline: 'Django Girls Organization',
   // favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
