@@ -91,11 +91,11 @@ const config = {
             title: 'Prepared by:',
              items: [
               {
-                label: 'Alpha Alimamy Kamara',
+                label: 'Django Girls Limkokwing University',
                 href: 'https://www.linkedin.com/in/alpha-alimamy-kamara-5b5806103/',
               },
               {
-                label: 'Alpha Omar Leigh',
+                label: 'Empowering Female Developers',
                 href: 'https://www.linkedin.com/in/alpha-alimamy-kamara-5b5806103/',
               }
               
